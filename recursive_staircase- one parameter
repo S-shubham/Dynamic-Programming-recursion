@@ -1,0 +1,30 @@
+// We say if we reach the end of the stair then we increase the count value and return 
+//else we return if smaller than 0
+
+#include<iostream>
+using namespace std;
+int count=0;
+
+void no_of_ways(int n)
+{
+	if(n==0)
+	{
+		++count;
+		return;
+	}
+	if(n<0){
+		return ;
+	}
+	no_of_ways(n-1);
+	no_of_ways(n-2);
+	no_of_ways(n-3);
+}
+
+int main()
+{
+	cout<<"\nEnter the no. of steps : ";
+	int n;
+	cin>>n;
+	no_of_ways(n);
+	cout<<"\nNo of ways in which we can reach the top is : "<<count;
+}
