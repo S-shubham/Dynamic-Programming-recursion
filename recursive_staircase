@@ -1,0 +1,34 @@
+// This program asks the final step and the starting step
+// The no of hops in each step that can be made is 1,2,3
+// This is a recursive solution (the solution flashed in my mind just by looking at the problem )
+
+#include<iostream>
+using namespace std;
+int count=0;
+
+void no_of_ways(int s,int n)
+{
+	if(s==n)
+	{
+		++count;
+		return;
+	}
+	if(s>n){
+		return ;
+	}
+	no_of_ways(s+1,n);
+	no_of_ways(s+2,n);
+	no_of_ways(s+3,n);
+}
+
+int main()
+{
+	cout<<"\nEnter the no. of steps : ";
+	int n;
+	cin>>n;
+	int s;
+	cout<<"\nEnter the starting step: ";
+	cin>>s;
+	no_of_ways(s,n);
+	cout<<"\nNo of ways in which we can reach the top is : "<<count;
+}
