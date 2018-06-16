@@ -3,7 +3,7 @@
 // This is a recursive solution (the solution flashed in my mind just by looking at the problem )
 
 #include<iostream>  
-using namespace std;
+using namespace std; 
 int count=0;  
   
 void no_of_ways(int s,int n)
