@@ -5,7 +5,7 @@
 #include<iostream>  
 using namespace std;
 int count=0;
-
+  
 void no_of_ways(int s,int n)
 {
 	if(s==n)
