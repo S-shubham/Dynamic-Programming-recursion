@@ -2,7 +2,7 @@
 
 #include<iostream>
 using namespace std;
-
+  
 int fiboi(int n)
 {
 	int fibo0=0,fibo1=1;
